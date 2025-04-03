@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(149, 149, 211);
+}
+.mainContainer2{
+    height:580px ;
+    width: 280px;
+    border-radius: 10px;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(90, 35, 35);
+}
+.containers{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 50%;
+    outline: 5px solid pink;  
+}
+.container1,.container2,.container3,.container4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container2{
+    z-index: -1;
+}
+.container3{
+    z-index: -2;
+    background:url("clock.png");
+    background-size:cover;
+    border-radius: 50%;
+}
+.dot{
+    height: 12px;
+    width: 12px;
+    background-color: black;
+    border-radius: 50%;
+}
+.digitalTime{
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: white;
+}
+div[class*=box]{
+    height: 190px;
+    width: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: transparent;
+}
+div[class*="stick"]{
+    height: 100px;
+    width: 3px;
+    background-color: wheat;
+}
+div[class="stick-1"]{
+    border: 1px solid black;
+    border-radius: 50%0% 0%50%;
+}
+div[class="stick-2"]{
+    background-color: transparent;
+}
+
+
+.bell-container{
+    height: 230px;
+    width: 160px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: -103px;
+    background-color: rgb(119, 53, 53);
+
+}
+.bell{
+    height: 420px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: moving 2s linear infinite;
+    margin-top: -210px
+}
+@keyframes moving {
+    0%{
+        transform: rotate(15deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(15deg);
+    }
+}
+div[class*="component"]{
+    position: relative;
+    height: 160px;
+    width: 10px;
+}
+.component1{
+    background-color: red;
+}
+.component2{
+    background-color:silver;
+}
+.round{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: silver;
+    border-radius: 50%;
+    bottom: -45px;
+    left: -20px;
+}
+
+
+.min-box .stick-1,.min-box .stick-2{
+    height: 90px;
+}
+
+.hr-box .stick-1,.hr-box .stick-2{
+    height: 80px;
+}
